@@ -1,19 +1,24 @@
 package com.example.junitspringdemodatv22v2;
 
+import com.example.junitspringdemodatv22v2.service.Calculator;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@SpringBootTest
 class CalculatorTest {
 
+    @Autowired
     private Calculator calculator;
 
     @BeforeEach
     void setUp() {
         //arrange
-        calculator = new Calculator();
+        //calculator = new Calculator();
     }
 
     @AfterEach
